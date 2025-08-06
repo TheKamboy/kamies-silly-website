@@ -41,6 +41,8 @@ function fanart_page() {
   location.replace("/fanart/index.html")
 }
 
+// Offsite Redirects
+
 function blog_website() {
   location.replace("https://kamies-blog.netlify.app/")
 }
