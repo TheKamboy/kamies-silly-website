@@ -1,0 +1,31 @@
+<div class="underconstruction">
+    <h1 class="title">Kamie's Silly Website</h1>
+    <div class="instructions">
+        <button id="home" type="button" onclick="home_page()">
+            Home
+        </button>
+        <button id="projects" type="button" onclick="projects()">
+            Projects
+        </button>
+        <button id="fanart" type="button" onclick="fanart_page()">
+            Art and Fanart
+        </button>
+        <button id="credits_page" type="button" onclick="credits_page()">
+            Credits
+        </button>
+        <button id="blog_website" type="button" onclick="blog_website()">
+            Blog
+        </button>
+    </div>
+    <div class="callout">
+        <img src="https://i.pinimg.com/originals/b4/32/48/b4324850a88409aaf33ac2528ec7d55b.gif"
+            alt="Temporary Graphic" height="150" width="150" id="underconstruction" />
+        <div id="divText"></div>
+        <script>
+            var img = document.getElementById("underconstruction");
+            document.getElementById('divText').innerHTML = img.alt;
+        </script>
+        <!-- <p style="font-style: italic;">Temporary Graphic</p> -->
+        <p>This website is under construction! Some pages may be empty, have missing content, or return a 404 error.</p>
+    </div>
+</div>

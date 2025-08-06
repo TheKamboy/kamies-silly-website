@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+  <title>Kamie's Silly Website</title>
+
+  <!-- The website stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- The website JavaScript file -->
+  <script src="/index.js" defer></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="load-html" data-source="/title.html"></div>
+    <div class="content" role="main">
+      <h1>[ CREDITS ]</h1>
+      <div class="callout">
+        <img class="circle-image" src="/assets/credits/pfps/kamie.png" height="128" width="128" />
+        <div class="callout-title">Kamie</div>
+        <p>It's my website, so...</p>
+        <p>Programmer, Designer &lpar;?&rpar;, basically most of this website.</p>
+      </div>
+      <div class="callout">
+        <img class="circle-image" src="/assets/credits/pfps/hebi.png" height="128" width="128" />
+        <div class="callout-title">Hebi / Kusa</div>
+        <p>Made the "Under Construction" Graphic &lpar;Still a WIP though&rpar;</p>
+      </div>
+      <h1>[ OTHER CREDITS ]</h1>
+      <div class="callout">
+        <img class="circle-image" src="/assets/credits/pfps/somethingoriginal.png" height="128" width="128" />
+        <div class="callout-title">Something Original</div>
+        <p>I used their website as a base for this one, so I wanted to give credit for that.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+$(function () {
+    $(".load-html").each(function () {
+        $(this).load(this.dataset.source);
+    });
+});
+</script>
+
+</html>

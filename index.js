@@ -4,22 +4,9 @@
 
 // Print a message in the browser's dev tools console each time the page loads
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("oooo developer console so coool :)");
-const buttoncount = 0;
+console.log("SMYW 💔");
 
 const btn = document.querySelector("button"); // Get the button from the page
-
-setTimeout(fixYoutube1, 3000);
-setTimeout(fixYoutube2, 3300);
-
-
-function fixYoutube1() {
-  document.getElementById('ytbutton').innerHTML = "wait no"
-}
-
-function fixYoutube2() {
-  document.getElementById('ytbutton').innerHTML = "this is my youtube"
-}
 
 // Open file when the link in the preview is clicked
 let goto = (file, line) => {
@@ -36,12 +23,24 @@ filer.forEach((f) => {
   };
 });
 
- 
-function yoobtoob() {
-  location.replace("https://www.youtube.com/@somethingoriginal987")
-}
+// Website Redirects
 
 function projects() {
-  //  window.open("https://somethingoriginal.glitch.me/projects.html")
   location.replace("/projects/index.html")
+}
+
+function home_page() {
+  location.replace("/index.html")
+}
+
+function credits_page() {
+  location.replace("/credits/index.html")
+}
+
+function fanart_page() {
+  location.replace("/fanart/index.html")
+}
+
+function blog_website() {
+  location.replace("https://kamies-blog.netlify.app/")
 }

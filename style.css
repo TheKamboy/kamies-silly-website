@@ -6,7 +6,11 @@
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #301934;
+  --color-bg: hsl(349.5,100%,77.6%); /* Light segment */
+  --color-bg2: hsl(349.6,100%,72.7%); /* Dark segment */
+  --color-bg-wrapper: rgba(256, 256, 256, 0.5); /* Light segment */
+  --color-callout-bg: #ffe4e1; /* Callout background */
+  --color-button-input-bg: #ffe4e1; /* Button and Input background */
   --color-text-main: #000000;
   --color-primary: #ffff00;
   --wrapper-height: 87vh;
@@ -19,7 +23,9 @@
 /* Basic page style resets */
 * {
   box-sizing: border-box;
+  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 }
+
 [hidden] {
   display: none !important;
 }
@@ -27,14 +33,13 @@
 /* Import fonts */
 @font-face {
   font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
 }
+
 @font-face {
   font-family: HK Grotesk;
   font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
 }
 
 /* Navigation grid */
@@ -57,9 +62,59 @@
   padding: 0 1rem;
 }
 
+p {
+  font-size: large;
+}
+
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
+
+  /* og code from w3ref */
+  background-image: linear-gradient(
+      /* Comment: Creates a linear gradient for the checkerboard */
+      45deg,
+      /* Comment: Specifies the angle of the gradient */
+
+      var(--color-bg2) 25%,
+      /* Comment: Sets the color and position of the first color stop */
+
+      transparent 25%,
+      /* Comment: Sets the color and position of the second color stop */
+
+      transparent 75%,
+      /* Comment: Sets the color and position of the third color stop */
+
+      var(--color-bg2) 75%,
+      /* Comment: Sets the color and position of the fourth color stop */
+
+      var(--color-bg2)
+      /* Comment: Sets the color of the fifth color stop */
+    ),
+    linear-gradient(
+      /* Comment: Creates another linear gradient for the checkerboard */
+      -45deg,
+      /* Comment: Specifies the angle of the gradient */
+
+      var(--color-bg2) 25%,
+      /* Comment: Sets the color and position of the first color stop */
+
+      transparent 25%,
+      /* Comment: Sets the color and position of the second color stop */
+
+      transparent 75%,
+      /* Comment: Sets the color and position of the third color stop */
+
+      var(--color-bg2) 75%,
+      /* Comment: Sets the color and position of the fourth color stop */
+
+      var(--color-bg2)
+      /* Comment: Sets the color of the fifth color stop */
+    );
+  background-size: 60px 60px;
+  /* Comment: Sets the size of the background squares */
+  background-repeat: repeat;
+  /* Comment: Specifies that the background pattern should repeat */
 }
 
 /* Page structure */
@@ -69,7 +124,35 @@ body {
   place-items: center;
   margin: 0 1rem;
 }
+
+.underconstruction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-wrapper);
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #000000;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: var(--color-bg);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 105%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,21 +160,50 @@ body {
 }
 
 /* Very light scaling for our illustration */
-.title {
-  color: #2800ff;
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 105%;
-  margin: 0;
-}
-
-/* Very light scaling for our illustration */
 .illustration {
   max-width: 100%;
   max-height: var(--image-max-width);
   margin-top: var(--image-margin);
+}
+
+/* Callouts */
+.callout {
+  background-color: var(--color-callout-bg);
+  color: black;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  margin: 1rem auto;
+  min-width: 40rem;
+  max-width: auto;
+  display: table-cell;
+}
+
+.callout .callout-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-and-text {
+  display: table-cell;
+}
+.image-and-text img {
+  float: left;
+  padding-right: 1rem;
+}
+
+.callout img {
+  float: left;
+  padding-right: 1rem;
+}
+
+
+.callout .circle-image {
+  /* width: 100px; */
+  /* height: 100px; */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* Instructions */
@@ -104,7 +216,7 @@ button,
 input {
   font-family: inherit;
   font-size: 100%;
-  background: #ffffff;
+  background: var(--color-button-input-bg);
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
@@ -112,10 +224,14 @@ input {
   transition: 500ms;
 }
 
-/* Subheading */
-h2 {
-  color: #2800ff;
+button {
+  color: black;
 }
+
+/* Subheading */
+/* h2 {
+  color: #2800ff;
+} */
 
 /* Links that open files in the editor */
 .fileopener {
@@ -124,6 +240,7 @@ h2 {
   border-bottom: 3px solid var(--color-primary);
   color: var(--color-secondary);
 }
+
 .fileopener:hover {
   border-bottom: 3px solid var(--color-secondary);
 }
