@@ -135,6 +135,8 @@ body {
   padding: 1rem;
   border-radius: 4px;
   border: 1px solid #000000;
+  min-width: 40rem;
+  max-width: auto;
 }
 
 /* Very light scaling for our illustration */
