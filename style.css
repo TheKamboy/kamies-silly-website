@@ -187,6 +187,10 @@ body {
 
 .image-and-text {
   display: table-cell;
+  min-width: 40rem;
+  max-width: auto;
+  align-items: center;
+  justify-content: center;
 }
 .image-and-text img {
   float: left;
