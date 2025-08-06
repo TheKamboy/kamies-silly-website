@@ -44,3 +44,7 @@ function fanart_page() {
 function blog_website() {
   location.replace("https://kamies-blog.netlify.app/")
 }
+
+function source_code_website() {
+  location.replace("https://github.com/TheKamboy/kamies-silly-website")
+}
