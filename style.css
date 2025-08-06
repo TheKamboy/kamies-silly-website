@@ -4,6 +4,9 @@
   See if you can cross-reference the rules in this file with the elements in index.html
 */
 
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+
 /* Our default values set as CSS variables */
 :root {
   --color-bg: hsl(349.5,100%,77.6%); /* Light segment */
@@ -20,31 +23,17 @@
   --image-max-width: 300px;
 
   --image-margin: 3rem;
-
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
 }
 
 /* Basic page style resets */
 * {
   box-sizing: border-box;
   text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+  font-family: 'Recursive', sans-serif;
 }
 
 [hidden] {
   display: none !important;
-}
-
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
-}
-
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
 }
 
 /* Navigation grid */
@@ -72,7 +61,6 @@ p {
 }
 
 body {
-  font-family: HK Grotesk;
   background-color: var(--color-bg);
 
   /* og code from w3ref */
@@ -152,7 +140,6 @@ body {
 .title {
   color: var(--color-title-text);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-family: HK Grotesk;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
