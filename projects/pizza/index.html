@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/favicon.ico" />
+
+  <title>Kamie's Silly Website</title>
+
+  <!-- The website stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- The website JavaScript file -->
+  <script src="/index.js" defer></script>
+
+  <meta property="og:title" content="Kamie's Silly Website">
+  <meta property="og:description" content="This is my cool and silly website, about me and my projects.">
+  <meta property="og:url" content="https://kamies-silly-website.netlify.app">
+  <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+  <meta name="theme-color" content="#FFC0CB">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="load-html" data-source="/title.html"></div>
+    <div class="content" role="main">
+      <h1>[ PROJECTS &gt; PIZZA ]</h1>
+      <img src="/assets/projects/pizza/pizza-logo.png" alt="the og pizza logo" id="pizzalogo">
+      <div id="divText"></div>
+      <script>
+        var img = document.getElementById("pizzalogo");
+        document.getElementById('divText').innerHTML = img.alt;
+      </script>
+      <div class="callout">
+        <p>The game is currently in development, and is not recommended for play yet.</p>
+      </div>
+      <p>Pizza is a game I made in 2020, that was never finished. Now, I aim to finish it.</p>
+      <p>Progress for this game is a bit slow, but I'll try my best to complete it.</p>
+      <h2>Information</h2>
+      <p>You can view the source code <a href="https://tangled.sh/@kamfurdev.bsky.social/Pizza">here</a>.</p>
+      <p>The game doesn't have a demo yet, but you can still play it from the source code (NOT RECOMMENDED).</p>
+    </div>
+  </div>
+</body>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+  $(function () {
+    $(".load-html").each(function () {
+      $(this).load(this.dataset.source);
+    });
+  });
+</script>
+
+</html>
