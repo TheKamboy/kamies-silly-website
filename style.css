@@ -177,6 +177,36 @@ body {
   display: table-cell;
 }
 
+.callout p {
+  text-align: left;
+}
+
+.card {
+  background-color: var(--color-callout-bg);
+  color: black;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  margin: 1rem auto;
+  min-width: 10rem;
+  min-height: fit-content;
+  max-width: 20rem;
+  /*display: table-cell;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+}
+
+.cards {
+  max-width: auto;
+  display: table-cell;
+}
+
 .callout .callout-title {
   font-weight: bold;
   font-size: 1.5rem;
