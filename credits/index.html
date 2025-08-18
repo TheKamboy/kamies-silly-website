@@ -1,67 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/assets/favicon.ico" />
+    <title>Kamie's Silly Website</title>
 
-  <title>Kamie's Silly Website</title>
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/index.js" defer></script>
 
-  <!-- The website JavaScript file -->
-  <script src="/index.js" defer></script>
+    <meta property="og:title" content="Kamie's Silly Website" />
+    <meta
+      property="og:description"
+      content="This is my cool and silly website about me and my projects."
+    />
+    <meta
+      property="og:url"
+      content="https://kamies-silly-website.netlify.app"
+    />
+    <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+    <meta name="theme-color" content="#FFC0CB" />
+  </head>
 
-  <meta property="og:title" content="Kamie's Silly Website">
-  <meta property="og:description" content="This is my cool and silly website about me and my projects.">
-  <meta property="og:url" content="https://kamies-silly-website.netlify.app">
-  <!-- <meta property="og:image" content="https://example.com/image.png"> -->
-  <meta name="theme-color" content="#FFC0CB">
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="load-html" data-source="/title.html"></div>
-    <div class="content" role="main">
-      <h1>[ CREDITS ]</h1>
-      <div class="callout">
-        <img class="circle-image" src="/assets/credits/pfps/kamie.png" height="128" width="128" />
-        <div class="callout-title">Kamie</div>
-        <p>It's my website, so...</p>
-        <p>Programmer, Designer &lpar;?&rpar;, basically most of this website.</p>
+  <body>
+    <div class="wrapper">
+      <div class="load-html" data-source="/title.html"></div>
+      <div class="content" role="main">
+        <h1>[ CREDITS ]</h1>
+        <div class="callout">
+          <img
+            class="circle-image"
+            src="/assets/credits/pfps/kamie.png"
+            height="128"
+            width="128"
+          />
+          <div class="callout-title">Kamie</div>
+          <p>It's my website, so...</p>
+          <p>
+            Programmer, Designer, basically most of this website was done by me.
+          </p>
+        </div>
+        <!-- I have my doubts hes gonna finish it. -->
+        <div class="callout">
+          <img
+            class="circle-image"
+            src="/assets/credits/pfps/hebi.png"
+            height="128"
+            width="128"
+          />
+          <div class="callout-title">Hebi</div>
+          <!-- <p>Made the "Under Construction" Graphic</p> -->
+          <p>Is making an "Under Construction" Graphic for the website.</p>
+        </div>
+        <h1>[ OTHER CREDITS ]</h1>
+        <div class="callout">
+          <img
+            class="circle-image"
+            src="/assets/credits/pfps/somethingoriginal.png"
+            height="128"
+            width="128"
+          />
+          <div class="callout-title">Something Original</div>
+          <p>
+            I used their website as a base for this one, so I wanted to give
+            credit for that.
+          </p>
+        </div>
+        <div class="callout">
+          <img class="circle-image" src="/assets/credits/pfps/w3r.png" />
+          <div class="callout-title">w3resources</div>
+          <p>
+            Some of the code in the website is by them (modified for the website
+            though).
+          </p>
+        </div>
+        <p style="font-style: italic">
+          The rest aren't important, or so little that it doesn't matter.
+        </p>
       </div>
-      <!-- I have my doubts hes gonna finish it. -->
-      <div class="callout">
-        <img class="circle-image" src="/assets/credits/pfps/hebi.png" height="128" width="128" />
-        <div class="callout-title">Hebi</div>
-        <!-- <p>Made the "Under Construction" Graphic</p> -->
-        <p>Is making an "Under Construction" Graphic for the website.</p>
-      </div>
-      <h1>[ OTHER CREDITS ]</h1>
-      <div class="callout">
-        <img class="circle-image" src="/assets/credits/pfps/somethingoriginal.png" height="128" width="128" />
-        <div class="callout-title">Something Original</div>
-        <p>I used their website as a base for this one, so I wanted to give credit for that.</p>
-      </div>
-      <div class="callout">
-        <img class="circle-image" src="/assets/credits/pfps/w3r.png" />
-        <div class="callout-title">w3resources</div>
-        <p>Some of the code in the website is by them (modified for the website though).</p>
-      </div>
-      <p style="font-style:italic;">The rest aren't important, or so little that it doesn't matter.</p>
     </div>
-  </div>
-</body>
+  </body>
 
-<script src="/js/jquery.min.js"></script>
-<script>
-$(function () {
-    $(".load-html").each(function () {
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".load-html").each(function () {
         $(this).load(this.dataset.source);
+      });
     });
-});
-</script>
-
+  </script>
 </html>
