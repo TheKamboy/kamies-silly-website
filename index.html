@@ -1,52 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/assets/favicon.ico" />
+    <title>Kamie's Silly Website</title>
 
-  <title>Kamie's Silly Website</title>
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/index.js" defer></script>
 
-  <!-- The website JavaScript file -->
-  <script src="/index.js" defer></script>
+    <meta property="og:title" content="Kamie's Silly Website" />
+    <meta
+      property="og:description"
+      content="This is my cool and silly website about me and my projects."
+    />
+    <meta
+      property="og:url"
+      content="https://kamies-silly-website.netlify.app"
+    />
+    <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+    <meta name="theme-color" content="#FFC0CB" />
+  </head>
 
-  <meta property="og:title" content="Kamie's Silly Website">
-  <meta property="og:description" content="This is my cool and silly website about me and my projects.">
-  <meta property="og:url" content="https://kamies-silly-website.netlify.app">
-  <!-- <meta property="og:image" content="https://example.com/image.png"> -->
-  <meta name="theme-color" content="#FFC0CB">
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="load-html" data-source="/title.html"></div>
-    <div class="content" role="main">
-      <h1>[ WELCOME ]</h1>
-      <p><b>Welcome to my silly little website!</b></p>
-      <p>You can check out different part of the website by clicking the <b>buttons</b> above.</p>
-      <h2>[ ME ]</h2>
-      <p>My name is Kamie, and I'm a trans teenager trying to make some games and stuff.</p>
-      <h2>[ FURSONA ]</h2>
-      <div class="image-and-text">
-        <img src="/assets/fanart/me_4-transparent.png" width="25%" height="25%" />
-        <p style="text-align: left;">My fursona is supposed to be a representation of me as a furry, so she has the same name, age, and some other
-          stuff as me.</p>
+  <body>
+    <div class="wrapper">
+      <div class="load-html" data-source="/title.html"></div>
+      <div class="content" role="main">
+        <h1>[ WELCOME ]</h1>
+        <p><b>Welcome to my silly little website!</b></p>
+        <p>
+          You can check out different part of the website by clicking the
+          <b>buttons</b> above.
+        </p>
+        <h2>[ ME ]</h2>
+        <p>
+          My name is Kamie, and I'm a trans teenager trying to make some games
+          and stuff.
+        </p>
+        <h2>[ FURSONA ]</h2>
+        <div class="image-and-text">
+          <img
+            src="/assets/fanart/my-art/me_4-transparent.png"
+            width="25%"
+            height="25%"
+          />
+          <p style="text-align: left">
+            My fursona is supposed to be a representation of me as a furry, so
+            she has the same name, age, and some other stuff as me.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 
-<script src="/js/jquery.min.js"></script>
-<script>
-  $(function () {
-    $(".load-html").each(function () {
-      $(this).load(this.dataset.source);
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".load-html").each(function () {
+        $(this).load(this.dataset.source);
+      });
     });
-  });
-</script>
-
+  </script>
 </html>

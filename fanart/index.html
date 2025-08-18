@@ -1,53 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/assets/favicon.ico" />
+    <title>Kamie's Silly Website</title>
 
-  <title>Kamie's Silly Website</title>
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/index.js" defer></script>
 
-  <!-- The website JavaScript file -->
-  <script src="/index.js" defer></script>
+    <meta property="og:title" content="Kamie's Silly Website" />
+    <meta
+      property="og:description"
+      content="This is my cool and silly website about me and my projects."
+    />
+    <meta
+      property="og:url"
+      content="https://kamies-silly-website.netlify.app"
+    />
+    <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+    <meta name="theme-color" content="#FFC0CB" />
+  </head>
 
-  <meta property="og:title" content="Kamie's Silly Website">
-  <meta property="og:description" content="This is my cool and silly website about me and my projects.">
-  <meta property="og:url" content="https://kamies-silly-website.netlify.app">
-  <!-- <meta property="og:image" content="https://example.com/image.png"> -->
-  <meta name="theme-color" content="#FFC0CB">
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="load-html" data-source="/title.html"></div>
-    <div class="content" role="main">
-      <div class="callout">
-        <p>This page is being worked on, so it is missing content for now...</p>
-      </div>
-      <h1>[ ART ]</h1>
-      <div class="cards">
-        <div class="card">
-          <img src="/assets/fanart/me_4-transparent.png" alt="pixel art" width=200 height=200>
-          <p>The first art of the modern version of my fursona.</p>
+  <body>
+    <div class="wrapper">
+      <div class="load-html" data-source="/title.html"></div>
+      <div class="content" role="main">
+        <div class="callout">
+          <p>
+            This page is being worked on, so it is missing content for now...
+          </p>
         </div>
+        <h1>[ ART ]</h1>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="/assets/fanart/my-art/me_4-transparent.png"
+              alt="pixel art"
+              width="200"
+              height="200"
+            />
+            <p>The first art of the modern version of my fursona.</p>
+          </div>
+        </div>
+        <h1>[ FAN ART ]</h1>
+        <p style="font-style: italic">Not ready yet...</p>
       </div>
-      <h1>[ FAN ART ]</h1>
-      <p style="font-style: italic;">Not ready yet...</p>
     </div>
-  </div>
-</body>
+  </body>
 
-<script src="/js/jquery.min.js"></script>
-<script>
-$(function () {
-    $(".load-html").each(function () {
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".load-html").each(function () {
         $(this).load(this.dataset.source);
+      });
     });
-});
-</script>
-
+  </script>
 </html>
