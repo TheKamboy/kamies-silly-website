@@ -235,7 +235,7 @@ p {
 .callout .circle-image {
   /* width: 100px; */
   /* height: 100px; */
-  border-radius: 50%;
+  border-radius: 1000px;
   object-fit: cover;
 }
 
