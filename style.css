@@ -6,14 +6,14 @@
 
 /* Font Imports */
 /* @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: hsl(349.5,100%,77.6%); /* Light segment */
-  --color-bg2: hsl(349.6,100%,72.7%); /* Dark segment */
+  --color-bg: hsl(349.5, 100%, 77.6%); /* Light segment */
+  --color-bg2: hsl(349.6, 100%, 72.7%); /* Dark segment */
   --color-bg-wrapper: rgba(256, 256, 256, 0.5); /* Light segment */
   --color-callout-bg: #ffe4e1; /* Callout background */
   --color-button-input-bg: #ffe4e1; /* Button and Input background */
@@ -31,8 +31,12 @@
 /* Basic page style resets */
 * {
   box-sizing: border-box;
-  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
-  font-family: /*'Recursive',*/ 'Sour Gummy', sans-serif;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  font-family: /*'Recursive',*/ "Sour Gummy", sans-serif;
 }
 
 [hidden] {
@@ -67,45 +71,30 @@ body {
   background-color: var(--color-bg);
 
   /* og code from w3ref */
-  background-image: linear-gradient(
-      /* Comment: Creates a linear gradient for the checkerboard */
-      45deg,
-      /* Comment: Specifies the angle of the gradient */
-
-      var(--color-bg2) 25%,
+  background-image:
+    linear-gradient(
+      /* Comment: Creates a linear gradient for the checkerboard */ 45deg,
+      /* Comment: Specifies the angle of the gradient */ var(--color-bg2) 25%,
       /* Comment: Sets the color and position of the first color stop */
-
-      transparent 25%,
+        transparent 25%,
       /* Comment: Sets the color and position of the second color stop */
-
-      transparent 75%,
+        transparent 75%,
       /* Comment: Sets the color and position of the third color stop */
-
-      var(--color-bg2) 75%,
+        var(--color-bg2) 75%,
       /* Comment: Sets the color and position of the fourth color stop */
-
-      var(--color-bg2)
-      /* Comment: Sets the color of the fifth color stop */
+        var(--color-bg2) /* Comment: Sets the color of the fifth color stop */
     ),
     linear-gradient(
-      /* Comment: Creates another linear gradient for the checkerboard */
-      -45deg,
-      /* Comment: Specifies the angle of the gradient */
-
-      var(--color-bg2) 25%,
+      /* Comment: Creates another linear gradient for the checkerboard */ -45deg,
+      /* Comment: Specifies the angle of the gradient */ var(--color-bg2) 25%,
       /* Comment: Sets the color and position of the first color stop */
-
-      transparent 25%,
+        transparent 25%,
       /* Comment: Sets the color and position of the second color stop */
-
-      transparent 75%,
+        transparent 75%,
       /* Comment: Sets the color and position of the third color stop */
-
-      var(--color-bg2) 75%,
+        var(--color-bg2) 75%,
       /* Comment: Sets the color and position of the fourth color stop */
-
-      var(--color-bg2)
-      /* Comment: Sets the color of the fifth color stop */
+        var(--color-bg2) /* Comment: Sets the color of the fifth color stop */
     );
   background-size: 60px 60px;
   /* Comment: Sets the size of the background squares */
@@ -135,7 +124,7 @@ body {
   justify-content: center;
   background-color: var(--color-bg-wrapper);
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 50px;
   border: 1px solid #000000;
   min-width: 40rem;
   max-width: 60rem;
@@ -144,8 +133,12 @@ body {
 /* Very light scaling for our illustration */
 .title {
   color: var(--color-title-text);
-  font-family: 'Chewy', 'Recursive', sans-serif;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Chewy", "Recursive", sans-serif;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -169,7 +162,7 @@ body {
   background-color: var(--color-callout-bg);
   color: black;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 50px;
   border: 1px solid #000000;
   margin: 1rem auto;
   min-width: 40rem;
@@ -185,7 +178,7 @@ body {
   background-color: var(--color-callout-bg);
   color: black;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 50px;
   border: 1px solid #000000;
   margin: 1rem auto;
   min-width: 10rem;
@@ -257,6 +250,7 @@ input {
 }
 
 button {
+  border-radius: 100px;
   color: black;
 }
 
