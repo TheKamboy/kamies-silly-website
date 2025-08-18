@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+
+    <title>Kamie's Silly Website</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/index.js" defer></script>
+
+    <meta property="og:title" content="Kamie's Silly Website" />
+    <meta
+      property="og:description"
+      content="This is my cool and silly website about me and my projects."
+    />
+    <meta
+      property="og:url"
+      content="https://kamies-silly-website.netlify.app"
+    />
+    <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+    <meta name="theme-color" content="#FFC0CB" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="load-html" data-source="/title.html"></div>
+      <div class="content" role="main">
+        <h1>[ EXTRAS ]</h1>
+        <p>
+          This holds links to different parts of the website, that aren't easily
+          accessible from the other links.
+        </p>
+        <p><a href="/tests/elements.html">Most of the website elements</a></p>
+      </div>
+    </div>
+  </body>
+
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".load-html").each(function () {
+        $(this).load(this.dataset.source);
+      });
+    });
+  </script>
+</html>

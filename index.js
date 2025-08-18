@@ -24,6 +24,10 @@ function fanart_page() {
   location.replace("/fanart/index.html");
 }
 
+function extras_page() {
+  location.replace("/extras_list/index.html");
+}
+
 // Offsite Redirects
 
 function blog_website() {
