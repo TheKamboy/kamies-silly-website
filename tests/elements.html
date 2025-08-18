@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/favicon.ico" />
+
+    <title>Kamie's Silly Website</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/index.js" defer></script>
+
+    <meta property="og:title" content="Kamie's Silly Website" />
+    <meta
+      property="og:description"
+      content="This is my cool and silly website about me and my projects."
+    />
+    <meta
+      property="og:url"
+      content="https://kamies-silly-website.netlify.app"
+    />
+    <!-- <meta property="og:image" content="https://example.com/image.png"> -->
+    <meta name="theme-color" content="#FFC0CB" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="load-html" data-source="/title.html"></div>
+      <div class="content" role="main">
+        <h1>[ ELEMENTS ]</h1>
+        <p>stuff for the website.</p>
+        <h2>[ BUTTONS ]</h2>
+        <button id="button1" type="button">This is a button.</button>
+        <p></p>
+        <button id="button2" type="button" onclick="source_code_website()">
+          This button opens the source code page.
+        </button>
+        <p></p>
+
+        <div class="instructions">
+          <button id="button1" type="button">
+            They can also be put in line,
+          </button>
+          <button id="button1" type="button">
+            by using the poorly named <code>instructions</code> div class.
+          </button>
+        </div>
+
+        <h2>[ CALLOUTS ]</h2>
+
+        <div class="callout">
+          <p>
+            This is a callout. They stand out from other text in the website to
+            give useful information to the user.
+          </p>
+        </div>
+        <div class="callout">
+          <img
+            class="circle-image"
+            src="/assets/credits/pfps/kamie.png"
+            height="128"
+            width="128"
+          />
+          <div class="callout-title">
+            They can also have a title, and an image along side it.
+          </div>
+        </div>
+
+        <h2>[ CARDS ]</h2>
+
+        <div class="card">
+          <img
+            src="/assets/fanart/my-art/me_4-transparent.png"
+            alt="pixel art"
+            width="200"
+            height="200"
+          />
+          <p>
+            This is a card, it's basically a smaller version of a callout. They
+            are designed to hold images.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <p>Cards can also be put into a grid.</p>
+          </div>
+          <div class="card">
+            <p>
+              You can do so by putting them in the <code>cards</code> div class.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".load-html").each(function () {
+        $(this).load(this.dataset.source);
+      });
+    });
+  </script>
+</html>
