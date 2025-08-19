@@ -14,7 +14,7 @@
 :root {
   --color-bg: hsl(349.5, 100%, 77.6%); /* Light segment */
   --color-bg2: hsl(349.6, 100%, 72.7%); /* Dark segment */
-  --color-bg-wrapper: rgba(256, 256, 256, 0.5); /* Light segment */
+  --color-bg-wrapper: rgba(256, 256, 256, 0.7); /* Light segment */
   --color-callout-bg: #ffe4e1; /* Callout background */
   --color-button-input-bg: #ffe4e1; /* Button and Input background */
 
