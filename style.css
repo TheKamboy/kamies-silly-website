@@ -6,15 +6,17 @@
 
 /* Font Imports */
 /* @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV,MONO@300..1000,1,1,1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"); */
 
 /* Our default values set as CSS variables */
 :root {
   --color-bg: hsl(349.5, 100%, 77.6%); /* Light segment */
   --color-bg2: hsl(349.6, 100%, 72.7%); /* Dark segment */
   --color-bg-wrapper: rgba(256, 256, 256, 0.7); /* Light segment */
+  --color-bga: rgba(256, 256, 256, 0.7); /* Light segment */
   --color-callout-bg: #ffe4e1; /* Callout background */
   --color-button-input-bg: #ffe4e1; /* Button and Input background */
 
@@ -68,7 +70,10 @@ p {
 }
 
 code {
-  font-family: "Google Sans Code", monospace;
+  font-family: "Recursive", monospace;
+  background-color: var(--color-bga);
+  border: 2px solid var(--color-bga);
+  border-radius: 5px;
 }
 
 body {
