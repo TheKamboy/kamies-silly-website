@@ -109,6 +109,16 @@ body {
   /* Comment: Sets the size of the background squares */
   background-repeat: repeat;
   /* Comment: Specifies that the background pattern should repeat */
+  animation: coolScrollEffect 1.5s linear infinite
+}
+
+@keyframes coolScrollEffect {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 60px;
+  }
 }
 
 /* Page structure */
