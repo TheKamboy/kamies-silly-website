@@ -265,6 +265,7 @@ input {
 button {
   border-radius: 100px;
   color: black;
+  cursor: pointer;
 }
 
 /* Subheading */
